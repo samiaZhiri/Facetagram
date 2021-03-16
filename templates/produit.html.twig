@@ -1,0 +1,52 @@
+{# /templates/produit.html.twig #}
+{% extends 'parent.html.twig' %}
+
+{#là j'ecrase le titre qu'il yavait ds parent pour remplcer par Page Produit#}
+{% block titre %}Page Produit{% endblock%}
+
+{#là je veux ajouter en plus un paragraphe sans effacer ce qu'il ya ds parent#}
+{% block contenuPrincipal %}
+    {{ parent() }}
+    <p>Ceci est une page produit</p>   
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Date de vente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            </tr>
+            <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            </tr>
+            <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+            </tr>
+        </tbody>
+</table>
+{% endblock %}
+
+{#là je veux ajouter en plus un link sans effacer ce qu'il ya ds parent#}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="produit.css" type="text/css" media="all" />
+{% endblock%}
+
+{#là je veux ajouter en plus un javascript sans effacer ce qu'il ya ds parent#}
+{% block javascripts %}
+ {{ parent() }}
+<script src="build/produit.js" />
+{% endblock %}

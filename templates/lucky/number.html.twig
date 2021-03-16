@@ -1,0 +1,26 @@
+{# templates/lucky/number.html.twig #}
+
+{# Ceci est un exemple de gabarit Twig #}
+{# set permet de definir une variable #}
+
+{% set collection = [1, 2, 3, 4, 5] %}
+
+<ul>
+{% for item in collection %}
+    <li>{{ item }} - <h1>Your lucky number is {{ number }}</h1></li>
+{% endfor %}
+</ul>
+{% for i in range(1, 10) %}
+    {{ i }}
+{% endfor %}
+
+{% set name = 'je m appelle Jaafar' %}
+{{ name |upper }}
+{{ name |lower }}
+{{ name |capitalize |reverse}}
+
+{% set mynumber = 6 %}
+<h1>Mon nombre est égal à {{ mynumber }}</h1>
+
+{% set mynumber2 =  mynumber  +2 %}
+<h1>Mon nombre est égal à {{ mynumber2 }}</h1>
